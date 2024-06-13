@@ -30,17 +30,28 @@ namespace Battle_System
 
             string playerClassChoice = OptionCheck("Select your class from the list below:\n" +
                 "1: Fighter\n" +
-                "2: Not Implemented\n" +
-                "3: Not Implemented", 
-                new string[] { "1" });
+                "2: Rogue\n" +
+                "3: Tank", 
+                new string[] { "1","2","3" });
 
             if (playerClassChoice == "1")
             {
                 player = new Fighter(playerName);
             }
 
+            else if (playerClassChoice == "2")
+            {
+                player = new Rogue(playerName);
+            }
+
+            else if (playerClassChoice == "3")
+            {
+                player = new Tank(playerName);
+            }
+
             return player;
         }
+
 
         static string PresenceCheck(string message)
         {

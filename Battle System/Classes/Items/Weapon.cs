@@ -19,4 +19,5 @@ namespace Battle_System.Classes.Items
             return attack;
         }
     }
+
 }
